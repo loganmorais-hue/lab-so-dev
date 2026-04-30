@@ -51,11 +51,11 @@ write(1, "Modo usuario -> kernel via write()\n", 38) = 38
 #    Como um programa de usuário consegue fazer I/O sem executar
 #    instruções privilegiadas diretamente? (mínimo 2 frases)
 
-Resposta 1: Pois eles utilizam uma chamada do Sistema, como o write(), que fazem a transição pro Kernel que realiza a operação e retornam o resultado pro Usuário
+Resposta 1: Pois eles utilizam uma chamada do Sistema, como o write(), que fazem a transição pro Kernel que realiza a operação e retornam o resultado pra tela do Usuário
 
 
 # 2. Compare write(fd, buffer, tamanho) com o "programa de canal"
 #    da apresentação: o que os dois têm em comum em termos de
 #    responsabilidades?
 
-Resposta 2: Ambos informam ao programa o que deve ser feito  
+Resposta 2: Ambos informam ao programa o que deve ser feito, sem executar a operação fisicamente. A operação fica responsável pelo hardware, enquanto o programa apenas fornece os dados e parâmetros.
