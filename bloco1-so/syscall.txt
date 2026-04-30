@@ -7,23 +7,32 @@
 # Cole abaixo a linha relevante da saída de:
 # strace echo "ola" 2>&1 | grep write
 
+-- write(1, "ola\n", 4) = 4
+
 Saída filtrada:
 
+-- fd: 1
+conteúdo: "ola\n"
+retorno: 4
+
 # Anote:
-#   Argumento 1 (file descriptor):
+#   Argumento 1 (file descriptor): 1
+
 #   O que está sendo escrito:
+write(1, "ola\n", 4) = 4
+
 #   Valor de retorno:
 
-fd:
-conteúdo:
-retorno:
+fd: 1
+conteúdo: "ola\n"
+retorno: 4
 
 
 # PARTE B — Programa C com write() direto
 
 # Cole aqui o código de syscall_direto.c que você escreveu:
 
-[código-fonte]
+
 
 
 # Cole aqui a linha write(...) da saída de strace ./syscall_direto:
